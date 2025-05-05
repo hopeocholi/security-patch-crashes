@@ -1,0 +1,12 @@
+
+### 💻 Add Supporting Script: `scripts/create-vm-checkpoint-before-patch.ps1`
+
+```powershell
+# PowerShell Script: Create Hyper-V Checkpoint Before Patching
+$VMs = Get-VM | Where-Object {$_.State -eq 'Running'}
+
+foreach ($vm in $VMs) {
+    $checkpointName = "$($vm.Name)-PrePatch-$(Get-Date -Format 'yyyyMMdd-HHmm')"
+    Checkpoint-VM -VMName $vm.Name -SnapshotName $checkpointName
+    Write-Output "Checkpoint created for $($vm.Name): $checkpointName"
+}
