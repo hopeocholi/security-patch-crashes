@@ -1,9 +1,9 @@
 # security-patch-crashes
 
 🏢 Company Context:
-A fintech startup, NovaPay, runs sensitive customer transaction services in a hybrid cloud environment. Internal tools and monitoring dashboards are hosted on Hyper-V virtual machines running Windows Server 2022. A routine security patch applied by automation caused all 6 VMs to crash unexpectedly at exactly midnight over the past 3 nights.
+A fintech startup, runs sensitive customer transaction services in a hybrid cloud environment. Internal tools and monitoring dashboards are hosted on Hyper-V virtual machines running Windows Server 2022. A routine security patch applied by automation caused all 6 VMs to crash unexpectedly at exactly midnight over the past 3 nights.
 
-# 🚨 VM Crash Triggered by Midnight Security Patch (NovaPay Case Study)
+# 🚨 VM Crash Triggered by Midnight Security Patch (FinTech Case Study)
 
 **Date:** 2025-04-30  
 **Reported By:** Operations Lead  
