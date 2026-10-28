@@ -1,9 +1,7 @@
+# Create a Hyper-V checkpoint for every running VM before patching,
+# so a faulty update can be rolled back.
 
-### 💻 Add Supporting Script: `scripts/create-vm-checkpoint-before-patch.ps1`
-
-```powershell
-# PowerShell Script: Create Hyper-V Checkpoint Before Patching
-$VMs = Get-VM | Where-Object {$_.State -eq 'Running'}
+$VMs = Get-VM | Where-Object { $_.State -eq 'Running' }
 
 foreach ($vm in $VMs) {
     $checkpointName = "$($vm.Name)-PrePatch-$(Get-Date -Format 'yyyyMMdd-HHmm')"
